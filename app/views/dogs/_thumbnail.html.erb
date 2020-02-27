@@ -4,10 +4,8 @@
     <%= image_tag url_for(dog.images.first), class: "dog-photo", alt: "Photo of #{dog.name}" %>
 
     <div>
-    	<%if !owner?(dog)%>
     		<%= link_to 'Like', dog_likes_path(dog.id), method: :post, remote: true, class: "dog-like"%>
     		<%= dog_like_count(dog) %>
-    	<%end%>
   	</div>
 
   </article>
