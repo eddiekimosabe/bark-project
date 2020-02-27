@@ -2,5 +2,13 @@
   <article>
     <h2 class="dog-name"><%= dog.name %></h2>
     <%= image_tag url_for(dog.images.first), class: "dog-photo", alt: "Photo of #{dog.name}" %>
+
+    <div>
+    	<%= link_to 'Like', dog_likes_path(dog.id), method: :post, remote: true, class: "dog-like"%>
+    	<%= dog_like_count(dog) %>
+  	</div>
+
   </article>
+
+	<%= dog_ad(dog_iteration) %>
 </a>
