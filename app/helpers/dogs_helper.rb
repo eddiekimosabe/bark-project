@@ -6,11 +6,13 @@ module DogsHelper
 	end
 
 	def dog_like_unlike(dog)
-		pre_like = dog.likes.find {|like| like.user_id == current_user.id}
-		if pre_like
-			link_to 'Unlike', dog_like_path(dog.id, pre_like), method: :delete, remote: true, class: "dog-unlike"
-		else
-			link_to 'Like', dog_likes_path(dog.id), method: :post, remote: true, class: "dog-like"
+		if current_user
+			pre_like = dog.likes.find {|like| like.user_id == current_user.id}
+			if pre_like
+				link_to 'Unlike', dog_like_path(dog.id, pre_like), method: :delete, remote: true, class: "dog-unlike"
+			else
+				link_to 'Like', dog_likes_path(dog.id), method: :post, remote: true, class: "dog-like"
+			end
 		end
 	end
 
