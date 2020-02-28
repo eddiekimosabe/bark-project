@@ -2,7 +2,16 @@ module DogsHelper
 
 	def dog_ad(dog_iteration) 
 		# since iteration starts from 0 we're gonna need the ad to appear at every odd index to have it display after ever 2nd dog image
-		image_tag "ad.jpg", class: "dog-ad" if dog_iteration.index.odd? && dog_iteration.index != 0
+		image_tag "ad.jpg", class: "dog-ad-image" if dog_iteration.index.odd? && dog_iteration.index != 0
+	end
+
+	def dog_like_unlike(dog)
+		pre_like = dog.likes.find {|like| like.user_id == current_user.id}
+		if pre_like
+			link_to 'Unlike', dog_like_path(dog.id, pre_like), method: :delete, remote: true, class: "dog-unlike"
+		else
+			link_to 'Like', dog_likes_path(dog.id), method: :post, remote: true, class: "dog-like"
+		end
 	end
 
 	def dog_like_count(dog)

@@ -1,14 +1,19 @@
-<a href="<%= url_for(dog) %>">
-  <article>
-    <h2 class="dog-name"><%= dog.name %></h2>
-    <%= image_tag url_for(dog.images.first), class: "dog-photo", alt: "Photo of #{dog.name}" %>
+<div class="dog-thumbnail">
+	<a href="<%= url_for(dog) %>">
+	  <article>
+	    <h2 class="dog-name"><%= dog.name %></h2>
+	    <%= image_tag url_for(dog.images.first), class: "dog-photo", alt: "Photo of #{dog.name}" %>
 
-    <div>
-    		<%= link_to 'Like', dog_likes_path(dog.id), method: :post, remote: true, class: "dog-like"%>
-    		<%= dog_like_count(dog) %>
-  	</div>
 
-  </article>
+	  </article>
 
+	</a>
+	<div class="dog-feedback">
+			<div class="dog-count"><%= dog_like_count(dog) %></div>
+			<div class="dog-like-unlike"><%= dog_like_unlike(dog) %></div>
+	</div>
+</div>
+
+<div class="dog-ad">
 	<%= dog_ad(dog_iteration) %>
-</a>
+</div>
