@@ -33,8 +33,13 @@ gem 'mini_magick', '~> 4.8'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#Use will_paginate for pagination
+# Use will_paginate for pagination
 gem 'will_paginate', '~> 3.1.0'
+
+# Use bootstrap for styling
+gem 'bootstrap', '~> 4.4.1'
+# Bootstrap javascript depends on jquery
+gem 'jquery-rails'
 
 gem 'devise'
 gem 'simple_form'

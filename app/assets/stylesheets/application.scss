@@ -14,8 +14,24 @@
  *= require_self
  */
 
+@import "bootstrap";
+
 header {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.carousel{
+	height: 50vh;
+	width: fit-content;
+}
+
+.carousel-inner {
+	.carousel-item {
+		img {
+			height:50vh;
+			object-fit: contain;
+		}
+	}
 }
