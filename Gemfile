@@ -44,6 +44,11 @@ gem 'bootstrap', '~> 4.4.1'
 # Bootstrap javascript depends on jquery
 gem 'jquery-rails'
 
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker'
+# Use React-Rails to integrate React.js with Rails view and controllers
+gem 'react-rails'
+
 gem 'devise'
 gem 'simple_form'
 
