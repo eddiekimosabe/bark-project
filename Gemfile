@@ -36,6 +36,9 @@ gem 'mini_magick', '~> 4.8'
 # Use will_paginate for pagination
 gem 'will_paginate', '~> 3.1.0'
 
+# Use to stylize the paginate 
+gem 'bootstrap-will_paginate'
+
 # Use bootstrap for styling
 gem 'bootstrap', '~> 4.4.1'
 # Bootstrap javascript depends on jquery
