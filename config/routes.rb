@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :dogs do
-  	resources :likes, only: [:create]
+  	resources :likes, only: [:create, :destroy]
   end
 
   root to: "dogs#index"
