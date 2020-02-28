@@ -1,9 +1,7 @@
-<div class="dog-thumbnail">
+<div class="col-lg-4 col-md-6 col-xs-12 dog-thumbnail">
 	<a href="<%= url_for(dog) %>">
-	  <article>
-	    <h2 class="dog-name"><%= dog.name %></h2>
-	    <%= image_tag url_for(dog.images.first), class: "dog-photo", alt: "Photo of #{dog.name}" %>
-	  </article>
+    <h2 class="dog-name"><%= dog.name %></h2>
+    <%= image_tag url_for(dog.images.first), class: "dog-photo img-fluid", alt: "Photo of #{dog.name}" %>
 	</a>
 	
 	<div class="dog-feedback">
@@ -12,6 +10,8 @@
 	</div>
 </div>
 
-<div class="dog-ad">
-	<%= dog_ad(dog_iteration) %>
-</div>
+<% if dog_iteration.index.odd? && dog_iteration.index != 0 %>
+	<div class="col-lg-4 col-md-6 col-xs-12 dog-ad">
+		<%= image_tag "ad.jpg", class: "dog-ad-image img-fluid" %>
+	</div>
+<%end%>

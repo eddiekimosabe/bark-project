@@ -2,9 +2,7 @@
   <h2><%= @dog.name %></h2>
 
   <% if @dog.images.attached? %>
-    <% @dog.images.each do |image| %>
-      <%= image_tag url_for(image), alt: "Photo of #{@dog.name}" %>
-    <% end %>
+    <%= carousel_for(@dog.images) %>
   <% end %>
 
   <p><%= @dog.description %></p>

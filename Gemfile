@@ -33,8 +33,21 @@ gem 'mini_magick', '~> 4.8'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#Use will_paginate for pagination
+# Use will_paginate for pagination
 gem 'will_paginate', '~> 3.1.0'
+
+# Use to stylize the paginate 
+gem 'bootstrap-will_paginate'
+
+# Use bootstrap for styling
+gem 'bootstrap', '~> 4.4.1'
+# Bootstrap javascript depends on jquery
+gem 'jquery-rails'
+
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker'
+# Use React-Rails to integrate React.js with Rails view and controllers
+gem 'react-rails'
 
 gem 'devise'
 gem 'simple_form'

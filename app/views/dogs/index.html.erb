@@ -1,3 +1,9 @@
+
 <p>Sort by: <%= link_to "Like", root_path(order: "likes") %></p>
-<%= render partial: 'thumbnail', collection: @dogs, as: :dog %>
-<%= will_paginate @dogs%>
+
+<div class="row no-gutters"><%= render partial: 'thumbnail', collection: @dogs, as: :dog %></div>
+
+<%= will_paginate @dogs, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer%>
+
+<%#= javascript_pack_tag 'application' %>
+<%#= react_component("App") %>
