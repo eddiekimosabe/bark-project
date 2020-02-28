@@ -3,11 +3,9 @@
 	  <article>
 	    <h2 class="dog-name"><%= dog.name %></h2>
 	    <%= image_tag url_for(dog.images.first), class: "dog-photo", alt: "Photo of #{dog.name}" %>
-
-
 	  </article>
-
 	</a>
+	
 	<div class="dog-feedback">
 			<div class="dog-count"><%= dog_like_count(dog) %></div>
 			<div class="dog-like-unlike"><%= dog_like_unlike(dog) %></div>
