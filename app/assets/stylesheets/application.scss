@@ -14,8 +14,52 @@
  *= require_self
  */
 
+@import "bootstrap";
+
 header {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.actions{
+	a {
+		margin-right: 2vh;
+	}
+}
+
+.carousel{
+	height: 50vh;
+	width: fit-content;
+}
+
+.carousel-inner {
+	.carousel-item {
+		img {
+			height: 50vh;
+			object-fit: contain;
+		}
+	}
+}
+
+.dog-thumbnail {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+}
+
+.dog-feedback {
+
+}
+
+.dog-ad {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		text-align: center;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
 }
