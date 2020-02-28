@@ -10,6 +10,8 @@ You'll need [ruby 2.2.4](https://rvm.io/rvm/install) and [rails 5](http://guides
 
 Run `bundle install`
 
+Please also make sure you can run :`yarn install` as I was attempting to connect/transition the application over to React on the front end before time constraints made it difficult. I've kept the react portion out of it and left it running as a server-rendered app.
+
 Initialize the data with `rake db:reset`
 
 Run the specs with `rspec`
